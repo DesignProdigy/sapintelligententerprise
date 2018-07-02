@@ -1,0 +1,1850 @@
+.mobile-lightbox {
+    overflow: hidden
+}
+
+.mobile-lightbox:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 100;
+    width: 100%;
+    height: 100%
+}
+
+.mfp-bg {
+    opacity: .5 !important
+}
+
+.lightboxPopup {
+    max-width: 970px;
+    min-width: 686px;
+    box-sizing: border-box;
+    margin: 50px auto;
+    position: relative
+}
+
+@media(min-width:981px) and (max-width:1240px) {
+    .lightboxPopup {
+        width: 980px
+    }
+}
+
+@media(min-width:1241px) {
+    .lightboxPopup {
+        width: 980px
+    }
+}
+
+.lightboxPopup .lightboxContainer {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 970px;
+    overflow: hidden;
+    margin: 0 auto;
+    max-height: none
+}
+
+.lightboxPopup .loadingBar {
+    margin: 0 auto;
+    width: 96px;
+    height: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.lightboxPopup .loadingBar .bar {
+    width: 32px;
+    height: 16px;
+    background-color: #f0ab00;
+    float: left;
+    opacity: 0
+}
+
+.lightboxPopup .loadingBar .bar-first {
+    animation: load1 1s ease-in-out infinite
+}
+
+.lightboxPopup .loadingBar .bar-second {
+    animation: load2 1s ease-in-out infinite
+}
+
+.lightboxPopup .loadingBar .bar-third {
+    animation: load3 1s ease-in-out infinite
+}
+
+.lightboxPopup .popupHeader {
+    padding: 35px 0 0 0;
+    color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    background: #000;
+    pointer-events: auto
+}
+
+.lightboxPopup .popupHeader .header-container {
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media(max-width:767px) {
+    .lightboxPopup .popupHeader .header-container {
+        padding-left: 28px;
+        padding-right: 28px
+    }
+}
+
+@media(min-width:768px) and (max-width:980px) {
+    .lightboxPopup .popupHeader .header-container {
+        padding-left: 79px;
+        padding-right: 79px
+    }
+}
+
+@media(min-width:981px) and (max-width:1240px) {
+    .lightboxPopup .popupHeader .header-container {
+        padding-left: 90px;
+        padding-right: 90px
+    }
+}
+
+@media(min-width:1241px) {
+    .lightboxPopup .popupHeader .header-container {
+        padding-left: 90px;
+        padding-right: 90px
+    }
+}
+
+.lightboxPopup .popupHeader .header-container:before,
+.lightboxPopup .popupHeader .header-container:after {
+    content: '';
+    display: table
+}
+
+.lightboxPopup .popupHeader .header-container:after {
+    clear: both
+}
+
+.lightboxPopup .popupHeader .toolbar-container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+@media(max-width:767px) {
+    .lightboxPopup .popupHeader .toolbar-container {
+        padding-left: 28px;
+        padding-right: 28px
+    }
+}
+
+@media(min-width:768px) and (max-width:980px) {
+    .lightboxPopup .popupHeader .toolbar-container {
+        padding-left: 79px;
+        padding-right: 79px
+    }
+}
+
+@media(min-width:981px) and (max-width:1240px) {
+    .lightboxPopup .popupHeader .toolbar-container {
+        padding-left: 90px;
+        padding-right: 90px
+    }
+}
+
+@media(min-width:1241px) {
+    .lightboxPopup .popupHeader .toolbar-container {
+        padding-left: 90px;
+        padding-right: 90px
+    }
+}
+
+.lightboxPopup .popupHeader .toolbar-container:before,
+.lightboxPopup .popupHeader .toolbar-container:after {
+    content: '';
+    display: table
+}
+
+.lightboxPopup .popupHeader .toolbar-container:after {
+    clear: both
+}
+
+.videoLightbox .lightboxPopup .popupHeader .toolbar-container {
+    padding-bottom: 15px
+}
+
+.videoLightbox .lightboxPopup .popupHeader .toolbar-container .toolbar .icon-download {
+    display: none
+}
+
+.lightboxPopup .popupHeader .toolbar {
+    margin-left: -10px;
+    pointer-events: auto
+}
+
+.lightboxPopup .popupHeader.minified {
+    pointer-events: auto
+}
+
+.lightboxPopup .popupHeader.minified .toolbar-container {
+    background: #000;
+    position: fixed;
+    width: 970px;
+    top: 0;
+    z-index: 15;
+    max-width: 100%;
+    transform: translateZ(0)
+}
+
+.lightboxPopup .popupHeader.minified .toolbtn.exit {
+    top: 5px
+}
+
+.lightboxPopup .popupHeader .toolbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.lightboxPopup .popupHeader .toolbar-list li {
+    display: inline-block;
+    position: relative
+}
+
+.lightboxPopup .popupHeader .toolbar-list li:hover .share-dropdown {
+    display: block
+}
+
+.lightboxPopup .popupHeader .toolbar-list li:hover .toolbtn {
+    color: #000;
+    background: #fff
+}
+
+.lightboxPopup .popupHeader .share-dropdown {
+    padding: 10px 0;
+    color: #000;
+    background: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    position: absolute;
+    z-index: 15
+}
+
+.lightboxPopup .popupHeader .share-dropdown li {
+    display: block;
+    font-family: "SAPLight", Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-zh_cn .lightboxPopup .popupHeader .share-dropdown li {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+html.content-iw_il .lightboxPopup .popupHeader .share-dropdown li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ar_ae .lightboxPopup .popupHeader .share-dropdown li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ja_jp .lightboxPopup .popupHeader .share-dropdown li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ko_kr .lightboxPopup .popupHeader .share-dropdown li {
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+html.content-zh_tw .lightboxPopup .popupHeader .share-dropdown li {
+    font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+.lightboxPopup .popupHeader .share-dropdown a {
+    color: #333;
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    padding: 8px 30px 8px 20px;
+    white-space: nowrap
+}
+
+.lightboxPopup .popupHeader .share-dropdown a span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    line-height: 18px;
+    padding-right: 10px
+}
+
+.lightboxPopup .popupHeader .share-dropdown a:hover {
+    background: #eee;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.lightboxPopup .popupHeader .toolbtn {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    line-height: 20px;
+    text-align: center;
+    background: no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 16
+}
+
+.lightboxPopup .popupHeader .toolbtn:before {
+    font-size: 20px
+}
+
+.lightboxPopup .popupHeader .toolbtn:hover {
+    color: #000;
+    background: #fff
+}
+
+.lightboxPopup .popupHeader .toolbtn.exit {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    line-height: normal;
+    margin: 0;
+    opacity: 1;
+    font-size: inherit;
+    font-family: inherit;
+    pointer-events: auto
+}
+
+.lightboxPopup .popupHeader .toolbtn.exit:before {
+    font-size: 20px;
+    line-height: 20px
+}
+
+.lightboxPopup .popupHeader .toolbtn.exit:hover {
+    color: inherit;
+    background: inherit
+}
+
+.lightboxPopup .popupContent {
+    pointer-events: auto;
+    max-height: none
+}
+
+.lightboxPopup .popupContent .canvasWrapper {
+    line-height: 0;
+    margin-bottom: 6px;
+    background: #fff url('../../sapdx/binary/clientlib-viewerjs/images/loading-icon.gif') center no-repeat
+}
+
+.lightboxPopup .popupContent .canvasWrapper.rendered {
+    background: #fff
+}
+
+.lightboxPopup .popupContent .canvasWrapper canvas {
+    vertical-align: top
+}
+
+.lightboxPopup .popupContent .pageWrapper:last-child .canvasWrapper {
+    margin-bottom: 0
+}
+
+.lightboxPopup .popupFooter {
+    background-color: #000;
+    min-height: 100px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 25px 10% 25px 90px;
+    color: #fff;
+    box-sizing: border-box;
+    pointer-events: auto;
+    position: relative
+}
+
+.lightboxPopup .sectionTitle {
+    color: #fff;
+    padding: 0;
+    pointer-events: auto
+}
+
+.lightboxPopup .descriptionText {
+    color: #fff;
+    line-height: 1.4em;
+    margin: 0;
+    pointer-events: auto
+}
+
+.lightboxPopup .pageWrapper {
+    position: relative
+}
+
+.lightboxPopup .animationTarget {
+    background-color: #000;
+    display: inline-block
+}
+
+.lightboxPopup .popupFooter,
+.lightboxPopup .popupHeader,
+.lightboxPopup .animationTarget {
+    opacity: 1
+}
+
+.lightboxPopup .video-wrapper {
+    display: inline-block;
+    position: relative
+}
+
+.lightboxPopup .video-wrapper .loadingVideo,
+.lightboxPopup .video-wrapper .playButton,
+.lightboxPopup .video-wrapper .bufferInfo,
+.lightboxPopup .video-wrapper div:not(.inline) img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(128, 128, 128, 0.3);
+    font-size: 3rem;
+    color: #fff;
+    padding: 5px 10px;
+    opacity: 1;
+    transition: opacity .3s
+}
+
+.lightboxPopup .video-wrapper .loadingVideo.hide,
+.lightboxPopup .video-wrapper .playButton.hide,
+.lightboxPopup .video-wrapper .bufferInfo.hide,
+.lightboxPopup .video-wrapper div:not(.inline) img.hide {
+    opacity: 0
+}
+
+.pdfLightbox {
+    min-height: 100vh;
+    -webkit-overflow-scrolling: touch
+}
+
+.pdfLightbox.mfp-wrap {
+    position: absolute
+}
+
+.pdfLightbox .canvasWrapper,
+.pdfLightbox .canvasWrapper canvas {
+    width: 100% !important
+}
+
+.pdfLightbox .lightboxPopup {
+    pointer-events: none;
+    max-height: none
+}
+
+.shortContentLightbox .mfp-container {
+    padding: 0;
+    height: 100%
+}
+
+.shortContentLightbox .mfp-content {
+    height: 100%
+}
+
+.shortContentLightbox .lightboxPopup {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    max-width: 100%
+}
+
+.shortContentLightbox .lightboxPopup .lightboxContainer {
+    position: relative;
+    max-width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.8)
+}
+
+.shortContentLightbox .lightboxPopup .lightboxContainer .popupContent:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.001)
+}
+
+.shortContentLightbox .lightboxPopup .lightboxContainer .popupContent:after {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 -4px
+}
+
+.shortContentLightbox .lightboxPopup .lightboxContainer .popupContent .pageWrapper {
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.shortContentLightbox .lightboxPopup .lightboxContainer .popupHeader {
+    width: 100%;
+    z-index: 10
+}
+
+.shortContentLightbox .lightboxPopup .lightboxContainer .popupFooter {
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+@media only screen and (max-width:1000px) {
+    .pdfLightbox .lightboxContainer,
+    .pdfLightbox .mfp-container {
+        padding: 0
+    }
+    .lightboxPopup {
+        width: 100%;
+        max-width: none;
+        min-width: inherit;
+        margin: 0
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .lightboxPopup .popupHeader {
+        padding-top: 25px
+    }
+    .lightboxPopup .popupFooter {
+        min-height: 80px
+    }
+}
+
+.lightboxReport.fullScreenMode .mfp-content {
+    position: static
+}
+
+.lightboxReport.fullScreenMode .mfp-container {
+    padding: 0
+}
+
+.lightboxReport.fullScreenMode .mfp-container:before {
+    display: none
+}
+
+.lightboxReport.fullScreenMode .lightboxPopup {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    position: static
+}
+
+.lightboxReport.fullScreenMode .lightboxPopup .lightboxContainer {
+    max-width: 100%;
+    position: static
+}
+
+.lightboxReport.fullScreenMode .lightboxPopup .lightboxContainer .popupContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: #000;
+    overflow-y: hidden
+}
+
+.lightboxReport.fullScreenMode .lightboxPopup .lightboxContainer .popupContent .pageWrapper {
+    display: block;
+    margin-bottom: 100%
+}
+
+.lightboxReport.fullScreenMode .lightboxPopup .lightboxContainer .popupContent .canvasWrapper {
+    margin: 0 auto
+}
+
+.lightboxReport:not(.mobileDevicesClass) .lightboxPopup .popupFooter a:hover:after {
+    display: block
+}
+
+.lightboxReport .lightboxPopup {
+    max-width: 1240px;
+    min-width: 320px;
+    width: auto;
+    height: calc(100vh - 100px)
+}
+
+.lightboxReport .lightboxPopup .lightboxContainer {
+    background: #fff;
+    max-width: 100%;
+    height: 100%
+}
+
+.lightboxReport .lightboxPopup .lightboxContainer:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 300px;
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.04))
+}
+
+.lightboxReport .lightboxPopup .lightboxContainer .toolbtn.exit {
+    top: 0;
+    right: 0;
+    background: #000;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 20px;
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 6
+}
+
+@media only screen and (min-width:1241px) {
+    .lightboxReport .lightboxPopup .lightboxContainer .toolbtn.exit {
+        width: 50px;
+        height: 50px;
+        line-height: 30px
+    }
+}
+
+.lightboxReport .lightboxPopup .lightboxContainer .toolbtn.exit:before {
+    font-size: 20px;
+    line-height: 20px
+}
+
+.lightboxReport .lightboxPopup .lightboxContainer .toolbtn.exit:hover {
+    color: #fff;
+    background: #000
+}
+
+.lightboxReport .lightboxPopup .lightboxContainer .toolbtn:hover {
+    color: #fff;
+    background: #000
+}
+
+.lightboxReport .lightboxPopup .aside-lightbox {
+    float: left;
+    width: 320px;
+    height: 100%;
+    z-index: 2;
+    position: relative
+}
+
+@media only screen and (min-width:1241px) {
+    .lightboxReport .lightboxPopup .aside-lightbox {
+        display: flex;
+        flex-direction: column
+    }
+}
+
+.lightboxReport .lightboxPopup .aside-lightbox>.jcf-scrollable-wrapper .desktop {
+    flex: 1 1 auto;
+    height: 100% !important;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden
+}
+
+.lightboxReport .lightboxPopup .aside-lightbox .toolbtn.exit {
+    display: none
+}
+
+.lightboxReport .lightboxPopup .matches__holder {
+    color: #fff;
+    font-size: 14px;
+    font-family: "SAPLight", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 1.4em;
+    overflow: hidden;
+    margin: 0 0 -10px
+}
+
+html.content-zh_cn .lightboxReport .lightboxPopup .matches__holder {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+html.content-iw_il .lightboxReport .lightboxPopup .matches__holder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ar_ae .lightboxReport .lightboxPopup .matches__holder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ja_jp .lightboxReport .lightboxPopup .matches__holder {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ko_kr .lightboxReport .lightboxPopup .matches__holder {
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+html.content-zh_tw .lightboxReport .lightboxPopup .matches__holder {
+    font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+@media only screen and (min-width:768px) and (max-width:1240px) {
+    .lightboxReport .lightboxPopup .matches__holder {
+        font-size: 13px
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .lightboxReport .lightboxPopup .matches__holder {
+        font-size: 12px
+    }
+}
+
+.lightboxReport .lightboxPopup .matches__holder .search-results-control {
+    float: right;
+    line-height: 38px
+}
+
+.lightboxReport .lightboxPopup .matches__holder .search-results-control span {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.lightboxReport .lightboxPopup .matches__holder .search-results-control .find-arrow {
+    cursor: pointer;
+    width: 20px;
+    height: 38px;
+    text-align: center
+}
+
+.lightboxReport .lightboxPopup .matches__holder .search-results-control .find-arrow.actionNotAllowed {
+    opacity: .3;
+    pointer-events: none
+}
+
+.lightboxReport .lightboxPopup .matches__holder .search-results-control .find-arrow:before {
+    font-size: 14px
+}
+
+.lightboxReport .lightboxPopup .matches__holder .search-results-control .find-arrow.disabled {
+    opacity: .1
+}
+
+.lightboxReport .lightboxPopup .matches__holder .entries {
+    overflow: hidden;
+    padding: 9px 0 0
+}
+
+.lightboxReport .lightboxPopup .search-toc-container .content-btn_mobile {
+    display: none;
+    float: left;
+    height: 40px;
+    padding: 10px 10px 9px;
+    margin-right: 10px;
+    margin-left: -10px;
+    cursor: pointer;
+    color: #fff
+}
+
+.lightboxReport .lightboxPopup .search-toc-container .content-btn_mobile:hover {
+    background: #fff;
+    color: #333
+}
+
+.lightboxReport .lightboxPopup .search-toc-container .content-btn_mobile:hover .content-label {
+    color: #333
+}
+
+.lightboxReport .lightboxPopup .search-toc-container .content-btn_mobile.active-btn {
+    background: #fff;
+    color: #333
+}
+
+.lightboxReport .lightboxPopup .search-toc-container .content-btn_mobile.active-btn .content-label {
+    color: #333
+}
+
+.lightboxReport .lightboxPopup .search-form .search__field {
+    position: relative
+}
+
+.lightboxReport .lightboxPopup .search-form .clear-search-btn {
+    position: absolute;
+    top: 0;
+    right: 39px;
+    padding: 0 5px;
+    color: #999;
+    width: 26px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+    align-items: center
+}
+
+.lightboxReport .lightboxPopup .search-form .clear-search-btn .icon-close {
+    font-size: 16px;
+    line-height: 16px
+}
+
+.lightboxReport .lightboxPopup .search-form .clear-search-btn .icon-close:before {
+    font-size: 16px;
+    vertical-align: top
+}
+
+.lightboxReport .lightboxPopup .search-form .search__input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 3px 70px 3px 10px;
+    color: #333;
+    border: 0;
+    margin: 0;
+    background: #fff;
+    position: relative;
+    font-style: italic;
+    font-family: "SAPBook", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 34px;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0
+}
+
+html.content-zh_cn .lightboxReport .lightboxPopup .search-form .search__input {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-weight: 300
+}
+
+html.content-iw_il .lightboxReport .lightboxPopup .search-form .search__input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ar_ae .lightboxReport .lightboxPopup .search-form .search__input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ja_jp .lightboxReport .lightboxPopup .search-form .search__input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ko_kr .lightboxReport .lightboxPopup .search-form .search__input {
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+    font-weight: 300
+}
+
+html.content-zh_tw .lightboxReport .lightboxPopup .search-form .search__input {
+    font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+    font-weight: 300
+}
+
+.lightboxReport .lightboxPopup .search-form .search__input::placeholder,
+.lightboxReport .lightboxPopup .search-form .search__input::-moz-placeholder,
+.lightboxReport .lightboxPopup .search-form .search__input:-ms-input-placeholder,
+.lightboxReport .lightboxPopup .search-form .search__input::-webkit-input-placeholder {
+    color: #999
+}
+
+.lightboxReport .lightboxPopup .search-form .search__input::-ms-clear {
+    display: none
+}
+
+.lightboxReport .lightboxPopup .search-form .search__icon {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    width: 34px;
+    padding: 0 5px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer
+}
+
+.lightboxReport .lightboxPopup .search-form .search__icon:before {
+    display: block;
+    margin: 0 auto
+}
+
+.lightboxReport .lightboxPopup .search-form .search__icon input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+    background: 0;
+    padding: 0
+}
+
+.lightboxReport .lightboxPopup .popupHeader {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 25px;
+    padding-bottom: 25px
+}
+
+@media(max-width:767px) {
+    .lightboxReport .lightboxPopup .popupHeader {
+        padding-left: 28px;
+        padding-right: 28px
+    }
+}
+
+@media(min-width:768px) and (max-width:980px) {
+    .lightboxReport .lightboxPopup .popupHeader {
+        padding-left: 79px;
+        padding-right: 79px
+    }
+}
+
+@media(min-width:981px) and (max-width:1240px) {
+    .lightboxReport .lightboxPopup .popupHeader {
+        padding-left: 90px;
+        padding-right: 90px
+    }
+}
+
+@media(min-width:1241px) {
+    .lightboxReport .lightboxPopup .popupHeader {
+        padding-left: 90px;
+        padding-right: 90px
+    }
+}
+
+.lightboxReport .lightboxPopup .popupHeader:before,
+.lightboxReport .lightboxPopup .popupHeader:after {
+    content: '';
+    display: table
+}
+
+.lightboxReport .lightboxPopup .popupHeader:after {
+    clear: both
+}
+
+@media only screen and (min-width:1241px) {
+    .lightboxReport .lightboxPopup .popupHeader {
+        flex: 0 0 auto;
+        padding-right: 32px;
+        padding-left: 32px
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .lightboxReport .lightboxPopup .popupHeader {
+        padding-right: 40px
+    }
+}
+
+.lightboxReport .lightboxPopup .popupHeader .header-container {
+    padding: 0 0 5px 0
+}
+
+@media only screen and (min-width:1241px) {
+    .lightboxReport .lightboxPopup .popupHeader .header-container [class^='col-'] {
+        width: 100%;
+        float: none
+    }
+}
+
+.lightboxReport .lightboxPopup .popupHeader .toolbar-container {
+    padding: 8px 0 15px
+}
+
+.lightboxReport .lightboxPopup .popupContent {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #999;
+    text-align: center;
+    -webkit-overflow-scrolling: touch
+}
+
+.lightboxReport .lightboxPopup .popupContent .pageWrapper {
+    text-align: left;
+    display: table;
+    margin: 0 auto
+}
+
+.lightboxReport .lightboxPopup .popupFooter {
+    color: #fff;
+    font-size: 14px;
+    font-family: "SAPLight", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 1.4em;
+    height: 50px;
+    padding: 0 0 0 32px;
+    width: 100%;
+    min-height: 50px;
+    transform: translateZ(0)
+}
+
+html.content-zh_cn .lightboxReport .lightboxPopup .popupFooter {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+html.content-iw_il .lightboxReport .lightboxPopup .popupFooter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ar_ae .lightboxReport .lightboxPopup .popupFooter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ja_jp .lightboxReport .lightboxPopup .popupFooter {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ko_kr .lightboxReport .lightboxPopup .popupFooter {
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+html.content-zh_tw .lightboxReport .lightboxPopup .popupFooter {
+    font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+@media only screen and (min-width:768px) and (max-width:1240px) {
+    .lightboxReport .lightboxPopup .popupFooter {
+        font-size: 13px
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .lightboxReport .lightboxPopup .popupFooter {
+        font-size: 12px
+    }
+}
+
+@media only screen and (min-width:1241px) {
+    .lightboxReport .lightboxPopup .popupFooter {
+        flex: 0 0 auto
+    }
+}
+
+.lightboxReport .lightboxPopup .popupFooter a {
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 40px;
+    height: 50px;
+    text-align: center;
+    margin: 0 0 0 10px;
+    position: relative;
+    outline: 0;
+    border: 0
+}
+
+.lightboxReport .lightboxPopup .popupFooter a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+    opacity: .2;
+    display: none
+}
+
+.lightboxReport .lightboxPopup .popupFooter a:hover,
+.lightboxReport .lightboxPopup .popupFooter a:active,
+.lightboxReport .lightboxPopup .popupFooter a:focus {
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+.lightboxReport .lightboxPopup .popupFooter a.hover:after {
+    display: block
+}
+
+.lightboxReport .lightboxPopup .popupFooter a.disabled {
+    opacity: .3
+}
+
+.lightboxReport .lightboxPopup .popupFooter a span {
+    font-size: 20px;
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.lightboxReport .lightboxPopup .popupFooter a span:before {
+    font-size: 20px;
+    line-height: 20px
+}
+
+.lightboxReport .lightboxPopup .popupFooter .fullscreen-control {
+    float: left;
+    line-height: 50px
+}
+
+.lightboxReport .lightboxPopup .popupFooter .zoom-control {
+    float: right;
+    line-height: 50px
+}
+
+.lightboxReport .lightboxPopup .popupFooter .zoom-control a:last-child {
+    margin: 0
+}
+
+.lightboxReport .lightboxPopup .popupFooter .zoom-control a span {
+    font-size: 16px
+}
+
+.lightboxReport .lightboxPopup .popupFooter .zoom-control a span:before {
+    font-size: 16px
+}
+
+.lightboxReport .lightboxPopup .popupFooter .zoom-control a.actionNotAllowed {
+    opacity: .3;
+    pointer-events: none
+}
+
+.lightboxReport .lightboxPopup .toolbtn.exit {
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background: #000
+}
+
+.lightboxReport .lightboxPopup .outlinePanel {
+    overflow-y: auto;
+    padding: 22px 16px 0 32px;
+    height: 100% !important
+}
+
+@media only screen and (min-width:1241px) {
+    .lightboxReport .lightboxPopup .outlinePanel {
+        flex: 1 1 auto
+    }
+}
+
+.lightboxReport .lightboxPopup .outlinePanel h2 {
+    padding: 0 0 22px;
+    margin: 0
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree {
+    padding: 0 0 5px;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "SAPLight", Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-zh_cn .lightboxReport .lightboxPopup .outlinePanel .outline-tree {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+html.content-iw_il .lightboxReport .lightboxPopup .outlinePanel .outline-tree {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ar_ae .lightboxReport .lightboxPopup .outlinePanel .outline-tree {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ja_jp .lightboxReport .lightboxPopup .outlinePanel .outline-tree {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ko_kr .lightboxReport .lightboxPopup .outlinePanel .outline-tree {
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+html.content-zh_tw .lightboxReport .lightboxPopup .outlinePanel .outline-tree {
+    font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+    font-weight: 100
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li {
+    position: relative;
+    margin: 0 0 17px
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li:last-child {
+    margin: 0
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active:not(.has-child):before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: #f0aa00;
+    left: -9px;
+    top: 3px
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active:not(.has-child)>a {
+    font-family: "SAPMedium", Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-zh_cn .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active:not(.has-child)>a {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-weight: 500
+}
+
+html.content-iw_il .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active:not(.has-child)>a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold
+}
+
+html.content-ar_ae .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active:not(.has-child)>a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold
+}
+
+html.content-ja_jp .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active:not(.has-child)>a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold
+}
+
+html.content-ko_kr .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active:not(.has-child)>a {
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+    font-weight: 500
+}
+
+html.content-zh_tw .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active:not(.has-child)>a {
+    font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+    font-weight: 500
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active>a {
+    font-family: "SAPRegular", Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-zh_cn .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active>a {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    font-weight: 400
+}
+
+html.content-iw_il .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active>a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ar_ae .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active>a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ja_jp .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active>a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal
+}
+
+html.content-ko_kr .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active>a {
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+    font-weight: 400
+}
+
+html.content-zh_tw .lightboxReport .lightboxPopup .outlinePanel .outline-tree li.active>a {
+    font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+    font-weight: 400
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li>ul {
+    list-style: none;
+    padding: 9px 0 0 16px;
+    display: none
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li>ul li {
+    margin: 0 0 9px
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li.has-child .drop-opener {
+    position: absolute;
+    top: -1px;
+    left: -18px;
+    padding: 0 4px;
+    cursor: pointer;
+    font-size: 8px;
+    line-height: 18px
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li.has-child .drop-opener:before {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 8px;
+    line-height: 18px
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree li.has-child.opened>ul {
+    display: block
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree a {
+    cursor: pointer;
+    color: #333
+}
+
+.lightboxReport .lightboxPopup .outlinePanel .outline-tree a:hover {
+    text-decoration: underline
+}
+
+.lightboxReport .lightboxPopup .textLayer {
+    opacity: 1
+}
+
+.lightboxReport .lightboxPopup .textLayer>div::selection {
+    background: rgba(0, 0, 255, 0.2)
+}
+
+.lightboxReport .lightboxPopup .textLayer>div::-moz-selection {
+    background: rgba(0, 0, 255, 0.2)
+}
+
+.lightboxReport .lightboxPopup .textLayer .highlight {
+    background-color: rgba(240, 171, 0, 0.3)
+}
+
+.lightboxReport .lightboxPopup .textLayer .highlight.selected {
+    background-color: rgba(240, 171, 0, 0.6)
+}
+
+.lightboxReport.mobile-toc-scroll-visible .lightboxPopup .jcf-scrollable-wrapper .jcf-scrollbar {
+    opacity: 1
+}
+
+@media only screen and (max-width:1000px) {
+    .lightboxReport.mobileScrollContainer {
+        -webkit-overflow-scrolling: touch
+    }
+    .lightboxReport .lightboxPopup .popupContent {
+        min-width: 100%;
+        float: left;
+        overflow: visible
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer {
+        overflow: visible;
+        display: table
+    }
+    .lightboxReport.mobileDevicesClass {
+        overflow-x: auto !important
+    }
+    .lightboxReport.mobileDevicesClass .lightboxPopup .lightboxContainer .content-btn_mobile:hover {
+        color: #fff;
+        background: inherit
+    }
+    .lightboxReport.mobileDevicesClass .lightboxPopup .lightboxContainer .content-btn_mobile:hover .content-label {
+        color: #fff
+    }
+    .lightboxReport.mobileDevicesClass .lightboxPopup .lightboxContainer .content-btn_mobile.active-btn {
+        background: #fff;
+        color: #333
+    }
+    .lightboxReport.mobileDevicesClass .lightboxPopup .lightboxContainer .content-btn_mobile.active-btn .content-label {
+        color: #333
+    }
+    .lightboxReport.mfp-wrap {
+        position: absolute
+    }
+    .lightboxReport .mfp-container {
+        padding: 0
+    }
+    .lightboxReport .lightboxPopup {
+        height: 100%
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer {
+        max-width: none;
+        margin: 0;
+        background: #000
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer:after {
+        display: none
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer.hidden .aside-lightbox .popupFooter {
+        position: relative
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .toolbtn.exit {
+        top: 15px;
+        right: 15px;
+        display: none
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox {
+        float: none;
+        width: 100vw;
+        display: block;
+        z-index: 5;
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        position: sticky;
+        left: 0;
+        height: auto
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .toolbtn.exit {
+        display: block
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .jcf-scrollable-wrapper {
+        width: 320px;
+        position: absolute !important;
+        top: 100%;
+        left: 69px;
+        z-index: 5;
+        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2)
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox.minified {
+        position: fixed;
+        top: 0;
+        z-index: 15;
+        height: auto;
+        max-width: 100%
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox.minified:not(.extended) .popupHeader {
+        padding-top: 15px;
+        padding-bottom: 15px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox.minified:not(.extended) .popupHeader .header-container,
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox.minified:not(.extended) .popupHeader .toolbar-container {
+        display: none
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .popupFooter {
+        display: block;
+        position: fixed;
+        flex: none;
+        width: auto;
+        min-height: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        right: 20px;
+        bottom: 20px;
+        box-sizing: border-box;
+        pointer-events: auto;
+        background: 0
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .popupFooter .fullscreen-control {
+        display: none
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .popupFooter .zoom-control {
+        line-height: 40px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .popupFooter .zoom-control__label {
+        display: none
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .popupFooter .zoom-control a {
+        height: 40px;
+        background: #000
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .popupFooter .zoom-control a:last-child {
+        margin: 0 0 0 10px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-toc-container {
+        position: relative
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-toc-container:before,
+    .lightboxReport .lightboxPopup .lightboxContainer .search-toc-container:after {
+        content: '';
+        display: table
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-toc-container:after {
+        clear: both
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-toc-container.search-focus .content-btn_mobile {
+        display: none
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-toc-container .search__field .search-active.search__input {
+        padding-right: 70px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile {
+        display: block;
+        box-sizing: border-box
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .icon-menu {
+        padding-right: 10px;
+        height: 21px;
+        line-height: 21px;
+        text-align: center;
+        background: no-repeat center;
+        background-size: contain;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 16
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .icon-menu:before {
+        font-size: 21px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .content-label {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 1px;
+        font-size: 18px;
+        font-family: "SAPBook", Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        line-height: 1.2em
+    }
+    html.content-zh_cn .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .content-label {
+        font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+        font-weight: 300
+    }
+    html.content-iw_il .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .content-label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal
+    }
+    html.content-ar_ae .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .content-label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal
+    }
+    html.content-ja_jp .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .content-label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal
+    }
+    html.content-ko_kr .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .content-label {
+        font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+        font-weight: 300
+    }
+    html.content-zh_tw .lightboxReport .lightboxPopup .lightboxContainer .content-btn_mobile .content-label {
+        font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+        font-weight: 300
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-form {
+        overflow: hidden
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-form .search__field .search__input {
+        text-overflow: ellipsis;
+        padding-right: 45px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-form .matches__holder {
+        min-height: 34px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-form .matches__holder .entries {
+        position: absolute;
+        left: 0;
+        padding-top: 10px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-form .matches__holder .search-results-control {
+        line-height: inherit;
+        margin-right: -7px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-form .matches__holder .search-results-control .overall-matches {
+        line-height: 1;
+        vertical-align: bottom
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .search-form .matches__holder .search-results-control .find-arrow:before {
+        vertical-align: middle;
+        line-height: 38px
+    }
+    .lightboxReport .lightboxPopup .outlinePanel {
+        background: #fff;
+        width: 320px;
+        padding-bottom: 20px;
+        padding-right: 32px;
+        max-width: 100%
+    }
+    .lightboxReport .lightboxPopup .jcf-scrollable-wrapper .jcf-scrollable {
+        width: 100% !important
+    }
+    .is-ios .lightboxReport.addressbar-visible:not(.toc-opened) .lightboxPopup .lightboxContainer .aside-lightbox.minified,
+    .is-ios .lightboxReport.addressbar-visible:not(.toc-opened) .lightboxPopup .lightboxContainer .aside-lightbox.extended {
+        height: 100%
+    }
+    .is-ios .lightboxReport.addressbar-visible:not(.toc-opened) .lightboxPopup .lightboxContainer .aside-lightbox .popupFooter {
+        transform: translateY(-120%)
+    }
+}
+
+@media only screen and (min-width:1001px) and (max-width:1240px) {
+    .lightboxReport.zoomedIn .lightboxPopup .popupContent {
+        overflow-x: auto
+    }
+    .lightboxReport .lightboxPopup .aside-lightbox {
+        display: flex;
+        flex-direction: column
+    }
+    .lightboxReport .lightboxPopup .aside-lightbox>.jcf-scrollable-wrapper {
+        flex: 1 1 auto;
+        height: 100% !important;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden
+    }
+    .lightboxReport .lightboxPopup .aside-lightbox .popupHeader {
+        flex: 0 0 auto;
+        padding-right: 32px;
+        padding-left: 32px
+    }
+    .lightboxReport .lightboxPopup .aside-lightbox .popupHeader .header-container [class^='col-'] {
+        width: 100%;
+        float: none
+    }
+    .lightboxReport .lightboxPopup .aside-lightbox .popupFooter {
+        flex: 0 0 auto
+    }
+    .lightboxReport .lightboxPopup .aside-lightbox .outlinePanel {
+        flex: 1 1 auto
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .jcf-scrollable-wrapper {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox .jcf-scrollable-wrapper .outlinePanel {
+        width: 100%
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox.minified:not(.extended) .toolbtn.exit {
+        right: 0;
+        top: 10px
+    }
+    .lightboxReport .lightboxPopup .lightboxContainer .aside-lightbox.minified:not(.extended) .popupHeader {
+        padding-top: 10px;
+        padding-bottom: 10px
+    }
+    .lightboxIR-page .is-ios .mfp-wrap {
+        height: 100vh !important
+    }
+}
+
+@media only screen and (min-device-width:320px) and (max-device-width:568px) and (orientation:landscape) {
+    .is-ios .lightboxReport.addressbar-visible .lightboxPopup .lightboxContainer .aside-lightbox .popupFooter {
+        transform: translateY(-200%)
+    }
+}
+
+@media only screen and (max-width:360px) {
+    .lightboxReport .lightboxPopup .outlinePanel {
+        left: 0
+    }
+}
+
+.lightboxIR-page {
+    margin: 0 !important
+}
+
+@media only screen and (min-width:768px) and (max-width:980px) {
+    .lightboxIR-page {
+        height: 100vh
+    }
+    .lightboxIR-page .mfp-wrap,
+    .lightboxIR-page body {
+        height: 100vh
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .lightboxIR-page {
+        height: 100vh
+    }
+    .lightboxIR-page .mfp-wrap,
+    .lightboxIR-page body {
+        height: 100vh
+    }
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper {
+    box-sizing: content-box;
+    position: relative;
+    overflow: hidden
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper:hover>.jcf-scrollbar {
+    opacity: 1;
+    transition-delay: 0
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .lightboxReport ~ .jcf-scrollbar-vertical {
+    z-index: 1050;
+    right: 15px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .lightboxReport ~ .jcf-scrollbar-vertical .jcf-scrollbar-inc,
+.lightboxIR-page .jcf-scrollable-wrapper .lightboxReport ~ .jcf-scrollbar-vertical .jcf-scrollbar-dec {
+    height: 20px;
+    width: 8px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .lightboxReport ~ .jcf-scrollbar-vertical .jcf-scrollbar-dec {
+    height: 200px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .lightboxReport ~ .jcf-scrollbar-horizontal {
+    z-index: 1050;
+    bottom: 13px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .popupContent ~ .jcf-scrollbar-vertical {
+    right: 29px;
+    width: 0
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .popupContent ~ .jcf-scrollbar-vertical .jcf-scrollbar-inc,
+.lightboxIR-page .jcf-scrollable-wrapper .popupContent ~ .jcf-scrollbar-vertical .jcf-scrollbar-dec {
+    height: 61px;
+    width: 8px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .popupContent ~ .jcf-scrollbar-vertical .jcf-scrollbar-inc {
+    height: 21px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .outlinePanel ~ .jcf-scrollbar-vertical {
+    top: 0;
+    bottom: 0;
+    right: 19px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar {
+    transition: opacity, 0.5s ease-out;
+    transition-delay: 1.5s;
+    position: absolute;
+    cursor: default;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 3;
+    opacity: 0
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar .jcf-scrollbar-handle {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    border: 0
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar .jcf-scrollbar-slider {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-vertical {
+    width: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    border: 0
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-vertical .jcf-scrollbar-inc,
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-vertical .jcf-scrollbar-dec {
+    height: 25px;
+    width: 8px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-vertical .jcf-scrollbar-handle {
+    height: 60px;
+    width: 8px;
+    min-height: 60px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-vertical .jcf-scrollbar-slider {
+    width: 8px
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-horizontal {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    height: 0;
+    border: 0
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-horizontal .jcf-scrollbar-inc,
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-horizontal .jcf-scrollbar-dec {
+    height: 8px;
+    width: 21px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-horizontal .jcf-scrollbar-dec {
+    left: auto;
+    top: 0
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-horizontal .jcf-scrollbar-slider {
+    height: 8px;
+    position: absolute;
+    top: 0;
+    left: 21px;
+    display: block
+}
+
+.lightboxIR-page .jcf-scrollable-wrapper .jcf-scrollbar-horizontal .jcf-scrollbar-handle {
+    position: absolute;
+    height: 8px;
+    min-width: 60px;
+    width: 60px
+}
+
+.lightboxIR-page .mobile-lightbox .jcf-scrollable-wrapper>.jcf-scrollable {
+    width: 100% !important;
+    height: 100% !important
+}
+
+.lightboxIR-page .jcf-scrollbar-dec,
+.lightboxIR-page .jcf-scrollbar-inc {
+    visibility: hidden;
+    pointer-events: none
+}
+
+.lightboxIR-page .jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+    visibility: hidden
+}
+
+.ie.lightboxIR-page .jcf-scrollable-wrapper>.mfp-wrap {
+    overflow-y: hidden !important
+}
