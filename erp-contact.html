@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html>
+		
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://clouderp.sap.com/etc/designs/clouderp/logo.ico"/>            
+    <title>ERP Contact | Cloud ERP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    
+    <meta name="title" content="Contact Us | SAP® Cloud ERP"> 
+     
+	 
+    <meta name="keywords" content="erp contact, enterprise resource planning contact"/> 
+    <meta name="description" content="Interested in SAP® Cloud ERP solutions but have questions? Complete and submit this form to talk with an expert about how our Cloud ERP solutions can solve your problems."/>
+    <meta property="og:image" content="https://discover.sap.com/content/dam/digitalhub/images/share_run_simple.jpg" />
+    
+    <input type="hidden" name="CRMCODE" id="CRMCODE" value="">
+    
+    
+    
+    <!-- Google Tag Manager -->
+   
+    <!-- End Google Tag Manager -->
+    <script>     
+        var gatedurl = "/gated-asset";
+        var isOpenedInAuthor = false;
+		 
+			var globalSiteName = "digitalhub-cloud-erp";
+        
+        var globalOriginSitename = "cloud-erp";
+        var globalLanguage = "en-us";
+        var includeOmni = false;
+        
+            var isPersistantHeader = false;
+		
+			isPersistantHeader = true;
+        
+    </script>
+   
+   
+    <!--   Stylesheet       -->
+    <link rel="stylesheet" href="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/css/1530179804882/erp-global.css" type="text/css"/>
+    <link rel="stylesheet" href="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/css/1530179804882/widget.carousel.css" type="text/css"/>
+    <link rel="stylesheet" href="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/css/1530179804882/erp-slick.css" type="text/css"/>
+    <link rel="stylesheet" href="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/css/1530179804882/erp-media.css" type="text/css"/>
+    <link rel="stylesheet" href="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/css/1530179804882/odometer-theme.css" type="text/css"/>
+    <link rel="stylesheet" href="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/css/1530179804882/jw.css" type="text/css"/>
+	<link rel="stylesheet" href="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/css/1530179804882/marketo-regform.css" type="text/css"/>
+    <!--   Javascript       -->
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/html5.js"></script>
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/1530179804882/clientlib.js"></script>
+    
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/1530179804882/navigation.js"></script>
+    
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/1530179804882/widget.carousel.js"></script>
+      <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/1530179804882/slick.js"></script>
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/jquery.inview.js"></script>
+        
+    
+    <!--jwplayer -->
+    <script src="//assets.dm.ux.sap.com/commonutils/js/jquery-jtemplates-0.8.4.js"></script>
+    <script src="//assets.dm.ux.sap.com/commonutils/js/jwplayer/jwplayer.js"></script>
+	<script>jwplayer.key = "DD6XvOsTbICsK60gf6v4IAITAdfh1jYyVw+TaR6uZfE=";</script>
+    <!-- Question change  on pageload -->
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/moment.js"></script>
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/1530179804882/feed.js"></script>
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/1530179804882/customfunctions.js"></script>
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/1530179804882/odometer.js"></script> 
+    <!-- jQuery Popup Overlay -->
+	<script src="https://clouderp.sap.com/etc/designs/clouderp/clientlibs/js/1530179804882/jquery.popupoverlay.js"></script>
+    
+    
+    <script>         
+        window.onerror = function (errorMsg, url, lineNumber) {
+            console.log('Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber);
+        }
+        var DHLoginCookieName = "DHLoginInfo"+"cloud-erp"+"en-us";
+        var isRegistered = false;
+        var arrGatedID = [];
+        var arrgatedid = [];
+        $(document).ready(function() {
+             checkGated();
+        });
+         function createRegCookie(){
+             //document.cookie = DHLoginCookieName + "=; path=/";
+         }
+        function checkGated(){	
+            var regcookie = getCookie(DHLoginCookieName);
+            if(regcookie == null){
+                createRegCookie();
+            }else{
+                if(regcookie != ""){
+                    applyGated(false);
+                    isRegistered = true;			
+                }
+            }
+        }
+        function applyGated(isgated){
+            if(arrGatedID.length > 0){
+                for(var i=0;i<arrGatedID.length;i++){
+                    if(!isgated){
+                        $("#"+arrGatedID[i][0]).attr("href",arrGatedID[i][1]);
+                        $("#"+arrGatedID[i][0]).removeAttr("onclick");
+                        $("#"+arrGatedID[i][0]).removeClass("fademodal_open");
+                    }
+                }
+            }
+            $( ".gated--video" ).each(function( index ) {
+              $( this ).addClass("initialism fade_open  btn-success");
+                $( this ).removeClass("fademodal_open gated--video");
+            });
+        }
+    </script>
+    <script>
+  document.addEventListener('bridgeDataSet', function (e) {
+     console.log(window.bridgeDataSet);
+     console.log(document.cookie);
+     console.log(window.omni_value);
+     console.log(window.omni_is1stviewinsession);
+  }, false);
+  </script>     
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+   
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="page"> 
+<!--   Header Start here       -->
+<header id="header" class='persiatntHeader  '>
+    <div class="container">
+        <section class="header-holder">
+            <div class="logo">
+               <h1> 
+                    <a title="SAP" data-engagement-tracking-analytics="header:Logo" href="/index">
+                        <img src="https://clouderp.sap.com/content/dam/digitalhub/clouderp/sap-logo-65x32.png" alt="SAP"/>
+                    </a>
+                
+                
+                
+                	<span class="sitename"></span> 
+                
+                </h1>
+            </div>
+            <!--  Mega menu Start here       -->
+            <div class="megaMenu customMegaMenu customMegaMenuImg">
+                
+                <nav class="mainNavigation"> <a class="nav-opener mobile-btn" href="javascript:;" onclick="openMobile(event)" title="Navigation"> <img alt="Navigation" src="https://clouderp.sap.com/etc/designs/clouderp/images/navigation-icon.png"/> </a><span></span>
+                    <div class="nav-block navigation">
+			<ul class="nav-area">
+            	
+            		<li  style="text-align:Left">
+                            <a title='Solutions' data-engagement-tracking-analytics="nav_L1:Solutions" data-href="/erp-solutions" href='/erp-solutions'>
+                                <em>Solutions </em>
+                            </a>
+                        	
+            
+                                 
+                        </li>
+        			
+				
+                
+            		<li class="has-drop"  style="text-align:Left">
+                            <a title='Industry' data-engagement-tracking-analytics="nav_L1:Industry" data-href="/erp-industries" href='/erp-industries'>
+                                <em>Industry </em>
+                            </a>
+                        	
+                                <span class="icon-arrow-down">
+                                    <a href="javascript:;" class="mobnoclick"></a>
+                                </span>  
+                        	
+            
+                                
+									<div class="drop-area dropdownWrap nav3Col">
+                                	<div class="drop-wrapper">
+                                    	<div class="drop-holder">
+                                        
+															
+                                            					 
+                                            					<ul>
+                                                                    
+                                                                    
+                                                                    			
+                                                                                    <li style="text-align:Left">
+                                                                                        <a title='Professional Services' data-engagement-tracking-analytics="nav_L2:Professional Services" data-href="/erp-industries/professional-services-erp" href='/erp-industries/professional-services-erp'>
+                                                                                            
+                                                                                            <em> Professional Services</em>                                                                                    
+                                                                                        </a>                                                                            
+                                                                                    </li>  
+                                                                    			
+                                                                            
+                                                                    			
+                                                                                    <li style="text-align:Left">
+                                                                                        <a title='Manufacturing' data-engagement-tracking-analytics="nav_L2:Manufacturing" data-href="/erp-industries/manufacturing-erp" href='/erp-industries/manufacturing-erp'>
+                                                                                            
+                                                                                            <em> Manufacturing</em>                                                                                    
+                                                                                        </a>                                                                            
+                                                                                    </li>  
+                                                                    			
+                                                                            
+                                                                    			
+                                                                                    <li style="text-align:Left">
+                                                                                        <a title='Wholesale Distribution' data-engagement-tracking-analytics="nav_L2:Wholesale Distribution" data-href="/erp-industries/wholesale-distribution-erp" href='/erp-industries/wholesale-distribution-erp'>
+                                                                                            
+                                                                                            <em> Wholesale Distribution</em>                                                                                    
+                                                                                        </a>                                                                            
+                                                                                    </li>  
+                                                                    			
+                                                                            
+																</ul>                                                                                                       			
+                                            					<ul>
+                                                        			
+                                                                                    <li style="text-align:Left">
+                                                                                        <a title='Life Sciences' data-engagement-tracking-analytics="nav_L2:Life Sciences" data-href="/erp-industries/life-sciences-erp" href='/erp-industries/life-sciences-erp'>
+                                                                                            
+                                                                                            <em> Life Sciences</em>                                                                                    
+                                                                                        </a>                                                                            
+                                                                                    </li>   
+                                                                    			
+                                                                            
+                                                                    			
+                                                                                    <li style="text-align:Left">
+                                                                                        <a title='Consumer and Retail' data-engagement-tracking-analytics="nav_L2:Consumer and Retail" data-href="/erp-industries/consumer-products-erp" href='/erp-industries/consumer-products-erp'>
+                                                                                            
+                                                                                            <em> Consumer and Retail</em>                                                                                    
+                                                                                        </a>                                                                            
+                                                                                    </li>   
+                                                                    			
+                                                                            
+                                                                    			
+                                                                                    <li style="text-align:Left">
+                                                                                        <a title='Healthcare' data-engagement-tracking-analytics="nav_L2:Healthcare" data-href="/erp-industries/healthcare-erp" href='/erp-industries/healthcare-erp'>
+                                                                                            
+                                                                                            <em> Healthcare</em>                                                                                    
+                                                                                        </a>                                                                            
+                                                                                    </li>   
+                                                                    			
+                                                                            
+																</ul>                                                                    
+                                                    		
+                                         	
+														
+															
+                                            				<ul>
+                                                                
+                                                            	
+                                                                			
+                                                                                <li style="text-align:Left">
+                                                                                    <a title='Public Sector' data-engagement-tracking-analytics="nav_L2:Public Sector" data-href="/erp-industries/public-sector-erp" href='/erp-industries/public-sector-erp'>
+                                                                                        
+                                                                                        <em> Public Sector</em>                                                                                    
+                                                                                    </a>                                                                            
+                                                                                </li>
+                                                                			
+                                                                        
+                                                                			
+                                                                                <li style="text-align:Left">
+                                                                                    <a title='Food and Beverage' data-engagement-tracking-analytics="nav_L2:Food and Beverage" data-href="/erp-industries/food-and-beverage-erp" href='/erp-industries/food-and-beverage-erp'>
+                                                                                        
+                                                                                        <em> Food and Beverage</em>                                                                                    
+                                                                                    </a>                                                                            
+                                                                                </li>
+                                                                			
+                                                                        
+                                                                			
+                                                                                <li style="text-align:Left">
+                                                                                    <a title='Finance' data-engagement-tracking-analytics="nav_L2:Finance" data-href="/erp-industries/finance-erp" href='/erp-industries/finance-erp'>
+                                                                                        
+                                                                                        <em> Finance</em>                                                                                    
+                                                                                    </a>                                                                            
+                                                                                </li>
+                                                                			
+                                                                        
+                                                            </ul>                                                                                                       
+                                            			
+                                         	
+									</div>
+                                    </div>
+                                    </div>
+                            	 
+                        </li>
+        			
+				
+                
+            		<li  style="text-align:Left">
+                            <a title='Resources' data-engagement-tracking-analytics="nav_L1:Resources" data-href="/erp-resources" href='/erp-resources'>
+                                <em>Resources </em>
+                            </a>
+                        	
+            
+				
+                
+            		<li  style="text-align:Left">
+                            <a title='Partner' data-engagement-tracking-analytics="nav_L1:Partner" data-href="/erp-partners" href='/erp-partners'>
+                                <em>Partner </em>
+                            </a>
+                        	
+            
+				
+                
+            		<li  style="text-align:Left">
+                            <a title='Customer Success' data-engagement-tracking-analytics="nav_L1:Customer Success" data-href="/erp-customers" href='/erp-customers'>
+                                <em>Customer Success </em>
+                            </a>
+                        	
+            
+				
+                
+            		<li  style="text-align:Left">
+                            <a title='About' data-engagement-tracking-analytics="nav_L1:About" data-href="/about" href='/about'>
+                                <em>About </em>
+                            </a>
+                        	
+            
+				
+                
+            		<li  style="text-align:Left">
+                            <a title='Contact' data-engagement-tracking-analytics="nav_L1:Contact" data-href="/erp-contact" href='/erp-contact'>
+                                <em>Contact </em>
+                            </a>
+                        	
+            
+				
+                
+        	</ul>
+		
+	
+    					
+                    </div>
+                </nav>
+                
+            </div>
+            <!--  Mega menu End here       --> 	
+            <div class="customCountryFlag">
+                <div class="flagContainer">
+                    
+                        <div class="usFlagImage"><img src="" alt=""/></div>
+                    
+                </div>
+                <div class="flagDropdown" style="display:none">
+                    <ul>
+                        
+                		
+                    </ul>            
+                </div>
+            </div>            
+            <div class="clear"></div>
+        </section>
+          
+    </div>
+</header>
+<!--  Header end  here -->
+<div id="main" class="singlepersiatntheader">
+    <div class="container"> 
+    	<div class="DHSecCompPar parsys"><div class="CQSectionComp parbase section">
+		<span class="anchor_SingleHeader"  id="section_1"></span>
+    
+<section class='section_1    hero' style="background:#FFFFFF; ">
+	
+        <div class="sectionBlock">
+            <div class="blockWrapper">
+                <div class="heroBlock">
+					
+                    <div class="mediaImage"> 
+                            
+                            	<span data-src="https://discover.sap.com/content/dam/digitalhub/clouderp/1920x50-contact-us-page.jpg" data-media="desktop" data-alt="" data-class="mediaDesktop"></span>
+                            
+                            
+                            	<span data-src="https://discover.sap.com/content/dam/digitalhub/clouderp/1440x50-contact-us-page.jpg" data-media="tablet" data-alt="" data-class="mediaTablet"></span>
+                            
+                            
+                                <span data-src="https://discover.sap.com/content/dam/digitalhub/clouderp/400x80-contact-us-page.jpg" data-media="mobile" data-alt="" data-class="mediaMobile"></span>
+                            
+                        </div>
+                     
+                </div>
+            </div>
+        </div>
+	  
+    <div class="commonHero " style="">
+			<div class="DHSubSecCompPar parsys"></div>
+	</div> 
+    <div class="" style=""></div>
+    <div class="" style=""></div>
+    <div class="clear"></div>
+    
+        
+    
+    
+    	<div class="motion-band-wrap">
+            <div class="motionBand">
+                <span class="part1" style="background-color:#f0ab00"></span>
+                <span class="part2" style="background-color:#f0ab00"></span>
+                <span class="part3" style="background-color:#f0ab00"></span>
+            </div>
+		</div>            
+    
+    
+	</section>
+<div class="clear"></div></div>
+<div class="CQSectionComp parbase section">
+	
+		<span class="anchor_SingleHeader"  id="section_2"></span>
+    
+<section class='section_2    hero' style="background:#FFFFFF; ">
+	 
+    <div class="commonHero commonHeroRelative " style="">
+			<div class="DHSubSecCompPar parsys"><div class="twocolumndiffwidth parbase section">
+  
+ 
+<div class="centerBlock">
+    <div class="twoColumnBox">
+        <div class="leftColumn findme   " style="width:73.5%; ">
+            <div class="customfieldpar01 parsys"><div class="textBlock parbase section">
+  
+ 
+    <div class="centerBlock">
+        <div class="customTextBlock ">
+			<div style='width:100%;vertical-align: middle;  ' class="positionClass textBlockMob">                
+                <!-- Code Start here -->
+                <div style="text-align:Left">
+                    
+		
+                                
+									<span class="Heading8 fontBold  fontBold" style="color:#000000;font-style:normal;text-decoration:none">Request a Demo, Free Trial, or Get Answers to Your Questions </span>
+                                
+                        
+                                
+									<span class="Please select fontLight  fontRegular" style="color:#FFFFFF;font-style:normal;text-decoration:none"><br/>    </span>
+                                
+                        
+                                
+									<span class="Heading4 fontRegular  fontRegular" style="color:#000000;font-style:normal;text-decoration:none"><br/>We’re Here for You</span>
+                                
+                        
+    
+                </div>
+                
+                <div class="fontBentonSansRegular standardDesc" >
+                        <p style="text-align: left;"><h9><span style="color: #000000;">Tell us about your business and an SAP cloud ERP expert will be in touch soon.</span><br>
+ &nbsp;</h9></p>
+<p>&nbsp;</p>
+                    </div>
+                
+                <!-- Code Start here -->
+                <div style="text-align:Left">
+                    
+		 
+        
+                                
+			<!-- code start here -->
+							
+				<!-- code end here  -->
+ <div class="clear"></div>
+ 
+                </div>                
+            </div>
+            <div class="multiButtonLink parbase">
+  
+ 
+    <div class="centerBlock">
+        <div style="text-align:Left">
+            
+ <div class="clear"></div>
+ 
+        </div>                
+    </div>
+<div class="clear"></div>
+</div>
+        </div>
+    </div>        
+<div class="clear"></div>
+</div>
+<div class="marketoregpage parbase section">
+<div >
+        <div class="marketoRegForm">
+			<script src="//app-ab21.marketo.com/js/forms2/js/forms2.min.js"></script>
+<form id="mktoForm_1018"></form>
+<script>MktoForms2.loadForm("//app-ab21.marketo.com", "106-XMQ-775", 1018);</script>
+		</div>             
+</div>
+    <div class="clear">  </div>
+</div>
+</div>
+        </div>
+        <div class="rightColumn findme   removerighttoppad" style="width:23.5%; background-color:#F2F2F2"> 
+            <div class="customfieldpar02 parsys"><div class="imagewithtext parbase section">
+	<div class="customImageWithText">        
+        <div class="customTextBlock ">
+                <div class="positionClass">                
+                    <!-- Code Start here -->
+                    
+                    	<div class="customTitle"> 
+                            <div style="text-align:Center">
+                                
+		
+                                
+									<span class="Heading4 fontLight  fontBold" style="color:#000000;font-style:normal;text-decoration:none">Contact Us</span>
+                                
+                        
+    
+                            </div>
+						</div>                        
+                    
+                    <div style="text-align:Center">
+                         
+                        	<div class="customImage"> 
+                            	<img src="https://discover.sap.com/content/dam/digitalhub/clouderp/email.png" alt="" title="">
+                        	</div>                                
+                         
+                    </div>
+                    
+                    <div class="customDescription"> 
+                        <div class="fontBentonSansRegular standardDesc" >
+                            <p style="text-align: center;">Email:<br>
+<b>support@sap.com</b></p>
+                        </div>
+                   	</div>
+                    
+                </div>            
+            </div>
+        </div>
+<div class="clear"></div></div>
+<div class="imagewithtext parbase section">
+	<div class="customImageWithText">        
+        <div class="customTextBlock ">
+                <div class="positionClass">                
+                    <!-- Code Start here -->
+                    
+                    <div style="text-align:Center">
+                         
+                        	<div class="customImage"> 
+                            	<img src="https://discover.sap.com/content/dam/digitalhub/clouderp/phone.png" alt="" title="">
+                        	</div>                                
+                         
+                    </div>
+                    
+                    <div class="customDescription"> 
+                        <div class="fontBentonSansRegular standardDesc" >
+                            <p style="text-align: center;">Phone:<br>
+<b>+1-800-872-1727</b></p>
+                        </div>
+                   	</div>
+                    
+                </div>            
+            </div>
+        </div>
+<div class="clear"></div></div>
+<div class="imagewithtext parbase section">
+	<div class="customImageWithText">        
+        <div class="customTextBlock ">
+                <div class="positionClass">                
+                    <!-- Code Start here -->
+                    
+                    	<div class="customTitle"> 
+                            <div style="text-align:Center">
+									<span class="Heading4 fontLight  fontBold" style="color:#000000;font-style:normal;text-decoration:none">Features</span>
+                            </div>
+						</div>                        
+                    
+                    <div style="text-align:Center">
+                         
+                        	<div class="customImage"> 
+                            	<img src="https://discover.sap.com/content/dam/digitalhub/clouderp/icon-01.png" alt="" title="">
+                        	</div>                                
+                         
+                    </div>
+                    
+                    <div class="customDescription"> 
+                        <div class="fontBentonSansRegular standardDesc" >
+                            <p style="text-align: center;">Drive insight-to-action with real time accounting and analytics</p>
+                        </div>
+                   	</div>
+                    
+                </div>            
+            </div>
+        </div>
+<div class="clear"></div></div>
+<div class="imagewithtext parbase section">
+	<div class="customImageWithText">        
+        <div class="customTextBlock ">
+                <div class="positionClass">                
+                    <!-- Code Start here -->
+                    
+                    <div style="text-align:Center">
+                         
+                        	<div class="customImage"> 
+                            	<img src="https://discover.sap.com/content/dam/digitalhub/clouderp/icon-02.png" alt="" title="">
+                        	</div>                                
+                         
+                    </div>
+                    
+                    <div class="customDescription"> 
+                        <div class="fontBentonSansRegular standardDesc" >
+                            <p style="text-align: center;">Set up smart projects: plan, execute, and manage profitability</p>
+                        </div>
+                   	</div>
+                    
+                </div>            
+            </div>
+        </div>
+<div class="clear"></div></div>
+<div class="imagewithtext parbase section">
+	<div class="customImageWithText">        
+        <div class="customTextBlock ">
+                <div class="positionClass">                
+                    <!-- Code Start here -->
+                    
+                    <div style="text-align:Center">
+                         
+                        	<div class="customImage"> 
+                            	<img src="https://discover.sap.com/content/dam/digitalhub/clouderp/icon-13.png" alt="" title="">
+                        	</div>                                
+                         
+                    </div>
+                    
+                    <div class="customDescription"> 
+                        <div class="fontBentonSansRegular standardDesc" >
+                            <p style="text-align: center;">Deploy the right resource to the right project at the right time</p>
+                        </div>
+                   	</div>
+                    
+                </div>            
+            </div>
+        </div>
+<div class="clear"></div></div>
+</div>
+  
+        </div>
+    </div>
+</div>
+<div class="clear"></div></div>
+</div>
+	</div> 
+    <div class="" style=""></div>
+    <div class="" style=""></div>
+    <div class="clear"></div>
+    
+        
+    
+    
+    
+	</section>
+<div class="clear"></div></div>
+</div>
+    </div>    
+</div>
+        <div class="clear"></div>        
+<footer id="footer" class="erpFooter">
+        <div class="container">
+            <div class="footer section">
+                <section class="footer standardFooter">
+                    <div class="socialLinksWrap">
+                        <section class="socialLinksGroup">
+                            <h3 class="headline">Share & Follow</h3>
+                            <ul class="nav">
+                                 
+                                            
+                                                <li> <a href="javascript:;" title="Facebook" onclick="openjoinFacebook()" class="socialLink"> <img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-facebook.png" alt="Facebook"/> </a> </li>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                			
+                                            
+                                            
+                                            
+                                    
+                                     
+                                            
+                                            
+                                                <li> <a href="javascript:;" title="twitter" onclick="openjoinTwitter()" class="socialLink"> <img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-twitter.png" alt="twitter"/> </a> </li>
+                                            
+                                            
+                                            
+                                            
+                                			
+                                            
+                                            
+                                            
+                                    
+                                     
+                                            
+                                            
+                                            
+                                                <li> <a href="javascript:;" title="YouTube" onclick="openjoinYouTube()" class="socialLink"> <img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-youtube.png" alt="YouTube"/> </a> </li>
+                                            
+                                            
+                                            
+                                			
+                                            
+                                            
+                                            
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                                <li> <a href="javascript:;" title="LinkedIn" onclick="openjoinLinkedIn()" class="socialLink"> <img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-linkedin.png" alt="LinkedIn"/> </a> </li>
+                                            
+                                            
+                                			
+                                            
+                                            
+                                            
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <li> <a href="javascript:;" title="Google+" onclick="openjoinGoogle()" class="socialLink"> <img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/clouderp/images/Google_plus_icon.png" alt="Google+"/> </a> </li>
+                                            
+                                			
+                                            
+                                            
+                                            
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                            
+                                			
+                                                <li> <a href="javascript:;" title="Instagram" onclick="openjoinInstagram()" class="socialLink"> <img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/clouderp/images/icon-insta.png" alt="Instagram"/> </a> </li>
+                                            
+                                            
+                                            
+                                            
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                            
+                                			
+                                            
+                                                <li> <a href="javascript:;" title="Slideshare" onclick="openSlideshare()" class="socialLink"> <img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-slideshare.png" alt="Slideshare"/> </a> </li>
+                                            
+                                            
+                                            
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                            
+                                			
+                                            
+                                            
+                                                <li> <a href="javascript:;" title="Email share" onclick="openshareemail()" class="socialLink"> <img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-email.png" alt="Email share"/> </a> </li>
+                                            
+                                            
+                                    
+                                    
+                                
+                            </ul>
+                            <div class="shareSocialBlock">
+                                 
+                                            
+                                                <div class="joinFacebook" style="display:none;">
+                                                    <div class="contBlock"> <span><img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-facebook.png" width="60" alt="facebook"/><br>
+                                                        Join the conversation on Facebook</span>
+                                                        <div class="clear"> </div>
+                                                        <ul >
+                                                            
+                                                                
+                                                                    <li><a id="footerFacebookAT" data-share-channel="facebook" data-share-tracking-analytics="SHARE" class="share_button_facebook" share:url="">Share this page<span class="icon-arrow-right"></span> </a></li>
+                                                                
+                                                            
+                                                            
+                                                            <li><a share:title="Follow all of SAP" data-share-channel="facebook" data-share-tracking-analytics="FOLLOW" href="https://www.facebook.com/SAP" target="_blank">Follow all of SAP<span class="icon-arrow-right"></span> </a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                			
+                                            
+                                            
+                                             
+                                    
+                                     
+                                            
+                                            
+                                                <div class="joinTwitter" style="display:none;">
+                                                    <div class="contBlock"> <span><img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-twitter.png" width="60" alt="twitter"/><br>
+                                                        Join the conversation on Twitter</span>
+                                                        <div class="clear"> </div>
+                                                        <ul >
+                                                            
+                                                                
+                                                                    <li><a id="footerTwitterAT" data-share-channel="twitter" data-share-tracking-analytics="SHARE" class="share_button_twitter" share:url="">Share this page<span class="icon-arrow-right"></span> </a></li>
+                                                                
+                                                            
+                                                            
+                                                            <li><a share:title="Follow all of SAP" data-share-channel="twitter" data-share-tracking-analytics="FOLLOW" href="https://twitter.com/sap" target="_blank">Follow all of SAP<span class="icon-arrow-right"></span> </a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                            
+                                            
+                                			
+                                            
+                                            
+                                             
+                                    
+                                     
+                                            
+                                            
+                                            
+                                                <div class="joinYouTube" style="display:none;">
+                                                    <div class="contBlock"> <span><img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-youtube.png" width="60" alt="linkedin"/><br>
+                                                        Subscribe to the YouTube Channel</span>
+                                                        <div class="clear"> </div>
+                                                        <ul >
+                                                            
+                                                            <li><a share:title="Subscribe to SAP" data-share-channel="youtube" data-share-tracking-analytics="FOLLOW" href="https://www.youtube.com/user/SAP" target="_blank">Subscribe to SAP<span class="icon-arrow-right"></span> </a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                            
+                                			
+                                            
+                                            
+                                             
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                                <div class="joinLinkedIn" style="display:none;">
+                                                    <div class="contBlock"> <span><img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-linkedin.png" width="60" alt="linkedin"/><br>
+                                                        Join the conversation on LinkedIn</span>
+                                                        <div class="clear"> </div>
+                                                        <ul >
+                                                            
+                                                                
+                                                                    <li><a id="footerLinkedInAT" data-share-channel="linkedin" data-share-tracking-analytics="SHARE" class="share_button_linkedin" share:url="">Share this page<span class="icon-arrow-right"></span> </a></li>
+                                                                
+                                                            
+                                                            
+                                                            <li><a share:title="Follow all of SAP" data-share-channel="linkedin" data-share-tracking-analytics="FOLLOW" href="https://www.linkedin.com/company/sap" target="_blank">Follow all of SAP<span class="icon-arrow-right"></span> </a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                			
+                                            
+                                            
+                                             
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                            
+                                                <div class="joinGoogle" style="display:none;">
+                                                    <div class="contBlock"> <span><img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-googlePlus.png" width="60" alt="Google+"/><br>
+                                                        Join the conversation on Google+</span>
+                                                        <div class="clear"> </div>
+                                                        <ul >
+                                                            
+                                                                
+                                                                    <li><a id="footerGooglePlusAT" data-share-channel="google_plusone_share" data-share-tracking-analytics="SHARE" class="share_button_google_plusone_share g:plusone:annotation='none'" share:url="">Share this page<span class="icon-arrow-right"></span> </a></li>
+                                                                
+                                                            
+                                                            
+                                                            <li><a share:title="Follow all of SAP" data-share-channel="google_plusone_share" data-share-tracking-analytics="FOLLOW" href="https://www.linkedin.com/company/sap" target="_blank">Follow all of SAP<span class="icon-arrow-right"></span> </a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                			
+                                            
+                                            
+                                             
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                            
+                                			
+                                                <div class="joinInstagram" style="display:none;">
+                                                    <div class="contBlock"> <span><img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-insta.png" width="60" alt="Instagram"/><br>
+                                                        Join the conversation on Instgram</span>
+                                                        <div class="clear"> </div>
+                                                        <ul >
+                                                            
+                                                                
+                                                            
+                                                            
+                                                            <li><a share:title="Follow all of SAP" data-share-channel="instagram" data-share-tracking-analytics="FOLLOW" href="https://www.instagram.com/sap" target="_blank">Follow all of SAP<span class="icon-arrow-right"></span> </a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                            
+                                             
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                            
+                                			
+                                            
+                                                <div class="Slideshare" style="display:none;">
+                                                    <div class="contBlock"> <span><img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-slideshare.png" width="60" alt="Slideshare"/><br>
+                                                        Join the conversation on Slideshare</span>
+                                                        <div class="clear"> </div>
+                                                        <ul >
+                                                            
+                                                            <li><a share:title="Share this page" data-share-channel="slideshare" data-share-tracking-analytics="FOLLOW" href="http://www.slideshare.net/SAP" target="_blank">Share this page<span class="icon-arrow-right"></span> </a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+                                             
+                                    
+                                     
+                                            
+                                            
+                                            
+                                            
+                                            
+                                			
+                                            
+                                            
+                                                <div class="shareEmail" style="display:none;">
+                                                    <div class="contBlock"> <span><img class="social-network-icon" src="https://clouderp.sap.com/etc/designs/digitalmicrosite/images/icon-email.png" width="60" alt="Email share"/><br>
+                                                        Send an Email</span>
+                                                        <div class="clear"> </div>
+                                                        <ul >
+                                                            
+                                                            <li><a id="asharethispage" data-share-channel="email" data-share-tracking-analytics="SHARE" share:title="Share this page" href="mailto:?body=">Share this page<span class="icon-arrow-right"></span> </a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            
+                                             
+                                    
+                                    
+                            </div>
+                        </section>
+                    </div>
+                    
+                    <div class="menu">
+                        
+                        <!-- Mobile Links--> 
+                         
+                            
+                            <div class="mobileLink ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Privacy" href='https://www.sap.com/about/legal/privacy.html' target='_blank'>
+                                    Privacy 
+                                </a>
+                            </div>
+                        
+                         
+                            
+                            <div class="mobileLink ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Terms of Use" href='https://www.sap.com/corporate-de/about/legal/terms-of-use.html' target='_blank'>
+                                    Terms of Use 
+                                </a>
+                            </div>
+                        
+                         
+                            
+                            <div class="mobileLink ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Legal Disclosure" href='https://www.sap.com/about/legal/impressum.html' target='_blank'>
+                                    Legal Disclosure 
+                                </a>
+                            </div>
+                        
+                         
+                            
+                            <div class="mobileLink ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Copyright" href='https://www.sap.com/about/legal/copyright.html' target='_blank'>
+                                    Copyright 
+                                </a>
+                            </div>
+                        
+                         
+                            
+                            <div class="mobileLink ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Trademark " href='https://www.sap.com/about/legal/copyright.html#trademark' target='_blank'>
+                                    Trademark  
+                                </a>
+                            </div>
+                        
+                         
+                            
+                            <div class="mobileLink ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Sitemap" href='https://www.sap.com/index.html' target='_blank'>
+                                    Sitemap 
+                                </a>
+                            </div>
+                        
+                         
+                            
+                            <div class="mobileLink ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Newsletter" href='https://www.sap.com/index.html' target='_blank'>
+                                    Newsletter 
+                                </a>
+                            </div>
+                        
+                        
+                        <div class="mobileLink "> <a data-engagement-tracking-analytics="footer:Text View" class="textView" title="Text View">Text View</a> </div>
+                        
+                        <!-- End of Mobile Links --> 
+                        
+                        <!-- Desktop Links -->
+                        <div class="desktopLinks"> 
+                             
+                            
+                            <div class="link ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Privacy" href='https://www.sap.com/about/legal/privacy.html' target='_blank'>
+                                    Privacy 
+                                </a>
+                            </div>
+                            
+                             
+                            
+                            <div class="link ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Terms of Use" href='https://www.sap.com/corporate-de/about/legal/terms-of-use.html' target='_blank'>
+                                    Terms of Use 
+                                </a>
+                            </div>
+                            
+                             
+                            
+                            <div class="link ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Legal Disclosure" href='https://www.sap.com/about/legal/impressum.html' target='_blank'>
+                                    Legal Disclosure 
+                                </a>
+                            </div>
+                            
+                             
+                            
+                            <div class="link ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Copyright" href='https://www.sap.com/about/legal/copyright.html' target='_blank'>
+                                    Copyright 
+                                </a>
+                            </div>
+                            
+                             
+                            
+                            <div class="link ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Trademark " href='https://www.sap.com/about/legal/copyright.html#trademark' target='_blank'>
+                                    Trademark  
+                                </a>
+                            </div>
+                            
+                             
+                            
+                            <div class="link ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Sitemap" href='https://www.sap.com/index.html' target='_blank'>
+                                    Sitemap 
+                                </a>
+                            </div>
+                            
+                             
+                            
+                            <div class="link ">
+                                <a class="standard" data-engagement-tracking-analytics="footer:Newsletter" href='https://www.sap.com/index.html' target='_blank'>
+                                    Newsletter 
+                                </a>
+                            </div>
+                            
+                            
+                            <div class="link"> <a class="textView" data-engagement-tracking-analytics="footer:Text View" title="Text View">Text View</a> </div>
+                        </div>
+                        <!-- End of Desktop Links --> 
+                        <div class="desktopInfoWrap desktopLegalInfo">
+                            <div class="quickLinksWrap">
+                                <section class="quickLinks"> <a class="opener legal" href="javascript:;" onclick="openDesktopLegal()">  </a>
+                                    <ul class="content" style="display: none;">
+                                        
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                        
+                    </div>
+    
+                    <!-- Button for TextView--> 
+                    <a class="fullBrowserView"> </a> </section>
+            </div>
+        </div>
+	</footer>
+         
+    </div>
+    
+  
+<script type="text/javascript" src="https://clouderp.sap.com/etc/designs/global/clientlibs/js/1530179805038/social-share.js"></script> 
+<!-- Fade -->
+<div id="fade" class="videoPop">
+    <span class="fade_close btn btn-default"><img src="https://clouderp.sap.com/etc/designs/clouderp/images/icon-close.png" alt=""/></span>
+    <div class="videoContainer" id="popupvideocont"	> </div>
+</div>
+<div id="fademodal" class="modalPop">
+    <span class="fademodal_close"></span>
+    <div class="modalContainer" id="popupmodalcont"	> </div>
+</div>
+<script>
+    $(document).ready(function () {
+        
+        $('#fade').popup({
+            transition: 'all 0.4s',
+            scrolllock: true,
+            onopen: function() { 
+				if(ismobiledevice4Player){
+                    $("#fade .fade_close").show();
+                }
+            },
+            onclose: function(){
+                $("#popupvideocont").html("");
+                if($("#fade.videoPop").length < 1){
+					$("#fade").addClass("videoPop");
+                }
+                if(!ismobiledevice){
+                    var runvideos = document.getElementsByClassName("is--video");
+                    if(runvideos.length > 0){
+                        for(var i=0;i<runvideos.length;i++){
+                            runvideos[i].play();
+                        }
+                    }
+                }
+            }
+        });
+        $('#fademodal').popup({
+            transition: "all 0s",
+            scrolllock: true,
+            blur:false,
+            escape:true,
+            keepfocus:true, 
+            opacity: '1.0',
+            onopen: function() { },
+            onclose: function(){
+                $("#popupmodalcont").html("");
+                checkGated();
+            }
+        });
+        
+    });
+    
+</script> 
+    <div class="clear"></div>
+    <a class="fordummyclick"></a>
+</body>
+</html>
